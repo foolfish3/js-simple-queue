@@ -2,18 +2,18 @@
 
 The simplest queue in JavaScript, only few lines.
 
-queue with no size support
+queue without size support
 ```js
 function SimpleQueue(){
 
 }
 
 SimpleQueue.prototype.push=function(e){
-    this.tail=this.head?this.tail.next={e:e,next:null}:this.head={e:e,next:null};
+    this.tail=this.head?this.tail[1]=[e,null]:this.head=[e,null];
 }
 
 SimpleQueue.prototype.shift=function(){
-    return this.head?[this.head.e,this.head=this.head.next][0]:null;
+    return this.head?[this.head[0],this.head=this.head[1]][0]:null;
 }
 
 SimpleQueue.prototype.clear=function(){
@@ -34,11 +34,11 @@ function SimpleQueue(){
 }
 
 SimpleQueue.prototype.push=function(e){
-    this.last=this.length++?this.last.next={e:e,next:null}:this.first={e:e,next:null};
+    this.last=this.length++?this.last[1]=[e,null]:this.first=[e,null];
 }
 
 SimpleQueue.prototype.shift=function(){
-    return this.length?[this.first.e,this.first=this.first.next,this.length--][0]:null;
+    return this.length?[this.first[0],this.first=this.first[1],this.length--][0]:null;
 }
 
 SimpleQueue.prototype.clear=function(){
@@ -99,7 +99,7 @@ for(i=0;i<1024*1024;i++){
     queue.shift();
 }
 console.log("cost "+(new Date().getTime()-st)+" ms for "+1024*1024+" ops");
-//cost 74 ms for 1048576 ops
+//cost 39 ms for 1048576 ops
 ```
 
 ### Thanks

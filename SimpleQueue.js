@@ -1,10 +1,10 @@
 function SimpleQueue(){
 }
 SimpleQueue.prototype.push=function(e){
-    this.tail=this.head?this.tail.next={e:e,next:null}:this.head={e:e,next:null};
+    this.tail=this.head?this.tail[1]=[e,null]:this.head=[e,null];
 }
 SimpleQueue.prototype.shift=function(){
-    return this.head?[this.head.e,this.head=this.head.next][0]:null;
+    return this.head?[this.head[0],this.head=this.head[1]][0]:null;
 }
 SimpleQueue.prototype.clear=function(){
     this.head=this.tail=null;
