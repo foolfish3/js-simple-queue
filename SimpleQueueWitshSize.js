@@ -3,11 +3,11 @@ function SimpleQueue(){
 }
 
 SimpleQueue.prototype.push=function(e){
-    this.last=this.length++?this.last[1]=[e,null]:this.first=[e,null];
+    this.tail=this.length++?this.tail[1]=[e,null]:this.head=[e,null];
 }
 
 SimpleQueue.prototype.shift=function(){
-    return this.length?[this.first[0],this.first=this.first[1],this.length--][0]:null;
+    return this.length?[this.head[0],this.head=this.head[1],this.length--][0]:null;
 }
 
 SimpleQueue.prototype.clear=function(){
