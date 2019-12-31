@@ -14,4 +14,6 @@ SimpleQueue.prototype.push=function(e){
 SimpleQueue.prototype.shift=function(){
     return this.length?[this.first.e,this.first=this.first.next,this.length--][0]:null;
 }
+//if you want to use it as nodejs module, uncomment it
+//module.exports=SimpleQueue;
 ```
