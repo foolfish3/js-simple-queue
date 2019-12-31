@@ -20,7 +20,7 @@ SimpleQueue.prototype.shift=function(){
 
 create queue
 ```js
-//var SimpleQueue = require("./SimpleQueue");
+//const SimpleQueue = require('./SimpleQueue');;
 var queue=new SimpleQueue();
 ```
 
@@ -65,6 +65,7 @@ for(i=0;i<1024*1024;i++){
     queue.shift();
 }
 console.log("cost "+(new Date().getTime()-st)+" ms for "+1024*1024+" ops");
+//cost 74 ms for 1048576 ops
 ```
 
 if you want more readable functions
@@ -81,4 +82,7 @@ SimpleQueue.prototype.size=function(){
     return this.length;
 }
 ```
+### Thanks
 
+Inspired by [js-simple-queue](https://github.com/foolfish3/js-simple-queue)
+by [QIAN YU](https://github.com/foolfish3).
