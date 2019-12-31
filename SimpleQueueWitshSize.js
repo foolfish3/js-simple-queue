@@ -1,16 +1,26 @@
 function SimpleQueue(){
+    this.length=0;
 }
+
 SimpleQueue.prototype.push=function(e){
-    this.tail=this.head?this.tail.next={e:e,next:null}:this.head={e:e,next:null};
+    this.last=this.length++?this.last.next={e:e,next:null}:this.first={e:e,next:null};
 }
+
 SimpleQueue.prototype.shift=function(){
-    return this.head?[this.head.e,this.head=this.head.next][0]:null;
+    return this.length?[this.first.e,this.first=this.first.next,this.length--][0]:null;
 }
+
 SimpleQueue.prototype.clear=function(){
     this.head=this.tail=null;
+    this.length=0;
 }
+
 SimpleQueue.prototype.isEmpty=function(){
-    return !this.head;
+    return this.length==0;
+}
+
+SimpleQueue.prototype.size=function(){
+    return this.length;
 }
 
 //if you want to use it as nodejs module
