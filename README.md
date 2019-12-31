@@ -77,7 +77,7 @@ for(i=0;i<5;i++){
 
 shift/poll/dequeue
 ```js
-for(;queue.length;){
+for(;!queue.isEmpty();){
     console.log(queue.shift());
 }
 ```
