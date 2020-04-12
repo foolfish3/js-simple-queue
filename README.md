@@ -102,6 +102,10 @@ console.log("cost "+(new Date().getTime()-st)+" ms for "+1024*1024+" ops");
 //cost 39 ms for 1048576 ops
 ```
 
-### Support
+## Projects
 
-by [QIAN YU](https://github.com/foolfish3).
+[js-simple-queue](https://github.com/foolfish3/js-simple-queue) some nodejs module need a queue, so i write one
+
+## Support
+
+glad to see you, if you need some support, contact [QIAN YU](https://github.com/foolfish3) or post in [issues](https://github.com/foolfish3/js-simple-queue/issues).
